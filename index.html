@@ -366,9 +366,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="#certs">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-   <a class="btn-pdf" 
+   <a class="btn-pdf"
    href="https://drive.google.com/uc?export=download&id=1LaZRbVmF9jm4LNwvX8vwaCxRXBEovdMZ" 
-   target="_blank">
+   target="_blank"
+   onclick="gtag('event', 'cv_download', {
+     'event_category': 'engagement',
+     'event_label': 'cv_header',
+     'value': 1
+   })">
+``
 
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
