@@ -657,49 +657,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   document.querySelectorAll('.fade-in, .tl-item').forEach(el => observer.observe(el));
 
-  // PDF Download
-  async function downloadPDF() {
-    const btn = document.getElementById('downloadPdf');
-    btn.classList.add('loading');
-    btn.querySelector('.pdf-label').textContent = 'Generating';
 
-    // Make all animated elements visible before capture
-    document.querySelectorAll('.fade-in, .tl-item').forEach(el => el.classList.add('visible'));
-
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
-    const pageW = 210; const pageH = 297;
-    const margin = 0;
-
-    const sections = ['home', 'experience', 'skills', 'certs', 'contact'];
-    let firstPage = true;
-
-    for (const id of sections) {
-      const el = document.getElementById(id);
-      if (!el) continue;
-      const canvas = await html2canvas(el, {
-        scale: 1.8,
-        useCORS: true,
-        backgroundColor: null,
-        logging: false
-      });
-      const imgData = canvas.toDataURL('image/jpeg', 0.92);
-      const imgW = pageW - margin * 2;
-      const imgH = (canvas.height * imgW) / canvas.width;
-
-      let posY = 0;
-      while (posY < imgH) {
-        if (!firstPage) pdf.addPage();
-        firstPage = false;
-        pdf.addImage(imgData, 'JPEG', margin, -posY, imgW, imgH);
-        posY += pageH;
-      }
-    }
-
-    pdf.save('Annarita_Di_Genova_CV.pdf');
-    btn.classList.remove('loading');
-    btn.querySelector('.pdf-label').textContent = 'Download CV';
-  }
 </script>
 </body>
 </html>
