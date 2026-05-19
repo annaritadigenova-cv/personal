@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <title>Cookie Policy — Annarita Di Genova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #C0392B;
+      --dark: #111111;
+      --light: #f5f3ef;
+      --cream: #faf8f4;
+      --gray: #888;
+      --border: #e0ddd6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 4rem;
+      background: rgba(250,248,244,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; letter-spacing: 0.05em;
+      color: var(--dark); text-decoration: none;
+    }
+    .nav-logo span { color: var(--red); }
+    .nav-back {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--red); }
+
+    .policy-container {
+      max-width: 900px;
+      margin: 100px auto 0;
+      padding: 4rem;
+      background: white;
+      min-height: 100vh;
+    }
+
+    .policy-header {
+      margin-bottom: 3rem;
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 2rem;
+    }
+
+    .policy-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .policy-meta {
+      font-size: 0.85rem;
+      color: var(--gray);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .toc {
+      background: var(--light);
+      border-left: 3px solid var(--red);
+      padding: 2rem;
+      margin-bottom: 3rem;
+      border-radius: 2px;
+    }
+
+    .toc h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .toc ol {
+      margin-left: 1.5rem;
+    }
+
+    .toc li {
+      margin-bottom: 0.5rem;
+    }
+
+    .toc a {
+      color: var(--red);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+
+    h2:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin-bottom: 1.5rem;
+      margin-left: 2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    .highlight {
+      background: rgba(192, 57, 43, 0.1);
+      border-left: 3px solid var(--red);
+      padding: 1rem 1rem 1rem 1rem;
+      margin: 1.5rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: white;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: var(--light);
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid var(--border);
+      color: var(--dark);
+    }
+
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cookie-category {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--red);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 2px;
+    }
+
+    .cookie-category h3 {
+      margin-top: 0;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--red);
+      color: white;
+      padding: 0.3rem 0.7rem;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-left: 1rem;
+    }
+
+    .contact-box {
+      background: var(--light);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      border-radius: 2px;
+      margin: 2rem 0;
+    }
+
+    .contact-box h3 {
+      margin-top: 0;
+      color: var(--red);
+    }
+
+    .contact-box a {
+      color: var(--red);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+    }
+
+    footer a {
+      color: var(--red);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .last-updated {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin: 3rem 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media print {
+      nav { display: none; }
+      .policy-container { margin-top: 0; padding: 2rem; }
+    }
+
+    @media (max-width: 900px) {
+      nav { padding: 1rem 2rem; }
+      .policy-container { padding: 2rem; margin-top: 80px; }
+      .policy-header h1 { font-size: 1.8rem; }
+      table { font-size: 0.8rem; }
+      td, th { padding: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo">Annarita <span>Di Genova</span></a>
+    <a href="/" class="nav-back">← Back to Portfolio</a>
+  </nav>
+
+  <div class="policy-container">
+    <div class="policy-header">
+      <h1>Cookie Policy</h1>
+      <div class="policy-meta">
+        <span><strong>Effective Date:</strong> January 15, 2026</span>
+        <span><strong>Last Updated:</strong> January 15, 2026</span>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#what-are">What Are Cookies?</a></li>
+        <li><a href="#why">Why We Use Cookies</a></li>
+        <li><a href="#essential">Essential Cookies</a></li>
+        <li><a href="#analytics">Analytics Cookies</a></li>
+        <li><a href="#marketing">Marketing Cookies</a></li>
+        <li><a href="#personalization">Personalization Cookies</a></li>
+        <li><a href="#functionality">Functionality Cookies</a></li>
+        <li><a href="#manage">How to Manage Cookies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </div>
+
+    <!-- 1. What Are Cookies -->
+    <h2 id="what-are">1. What Are Cookies?</h2>
+    <p>
+      Cookies are small text files stored on your device (computer, tablet, smartphone) by your web browser 
+      when you visit a website. They allow websites to remember information about your visits and preferences.
+    </p>
+
+    <h3>Types of Cookies</h3>
+    <ul>
+      <li>
+        <strong>Session Cookies:</strong> Temporary cookies deleted when you close your browser. 
+        Used for maintaining your browsing session.
+      </li>
+      <li>
+        <strong>Persistent Cookies:</strong> Stored for an extended period. Remain on your device 
+        until expiration or manual deletion.
+      </li>
+      <li>
+        <strong>First-Party Cookies:</strong> Set by our website directly.
+      </li>
+      <li>
+        <strong>Third-Party Cookies:</strong> Set by external services (Google, Meta, LinkedIn) integrated on our site.
+      </li>
+    </ul>
+
+    <!-- 2. Why We Use Cookies -->
+    <h2 id="why">2. Why We Use Cookies</h2>
+    <p>
+      We use cookies to:
+    </p>
+    <ul>
+      <li>Ensure site functionality and security</li>
+      <li>Understand how you use our website</li>
+      <li>Improve user experience and performance</li>
+      <li>Deliver personalized content and recommendations</li>
+      <li>Enable targeted advertising on partner platforms</li>
+      <li>Track campaign effectiveness</li>
+      <li>Remember your preferences and settings</li>
+    </ul>
+
+    <!-- 3. Essential Cookies -->
+    <div class="cookie-category">
+      <h3>
+        🔒 Essential Cookies
+        <span class="badge">Always Required</span>
+      </h3>
+      <p>
+        These cookies are necessary for the website to function properly. They enable core functionality 
+        like security, session management, and preference storage. <strong>These cannot be disabled.</strong>
+      </p>
+
+      <table>
+        <tr>
+          <th>Cookie Name</th>
+          <th>Provider</th>
+          <th>Purpose</th>
+          <th>Duration</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td>gdpr_consent</td>
+          <td>Our Website</td>
+          <td>Store your cookie preferences</td>
+          <td>365 days</td>
+          <td>First-party</td>
+        </tr>
+        <tr>
+          <td>gdpr_consent_timestamp</td>
+          <td>Our Website</td>
+          <td>Track consent date for expiry</td>
+          <td>365 days</td>
+          <td>First-party</td>
+        </tr>
+        <tr>
+          <td>gdpr_consent_audit</td>
+          <td>Our Website</td>
+          <td>Maintain compliance audit trail</td>
+          <td>365 days</td>
+          <td>First-party</td>
+        </tr>
+        <tr>
+          <td>JSESSIONID</td>
+          <td>Our Website</td>
+          <td>Maintain user session</td>
+          <td>Session</td>
+          <td>First-party</td>
+        </tr>
+        <tr>
+          <td>__Host-session</td>
+          <td>Our Website</td>
+          <td>Secure session cookie</td>
+          <td>Session</td>
+          <td>First-party</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 4. Analytics Cookies -->
+    <div class="cookie-category">
+      <h3>
+        📊 Analytics Cookies
+        <span class="badge">Consent Required</span>
+      </h3>
+      <p>
+        These cookies help us understand how visitors interact with our site. They collect aggregated 
+        information about pages visited, time spent, bounce rates, and referrer sources. 
+        <strong>Data is anonymized and not shared with advertisers.</strong>
+      </p>
+
+      <table>
+        <tr>
+          <th>Cookie Name</th>
+          <th>Provider</th>
+          <th>Purpose</th>
+          <th>Duration</th>
+          <th>Data Shared</th>
+        </tr>
+        <tr>
+          <td>_ga</td>
+          <td>Google Analytics (Google LLC)</td>
+          <td>Client ID for session identification</td>
+          <td>2 years</td>
+          <td>Anonymized</td>
+        </tr>
+        <tr>
+          <td>_ga_*</td>
+          <td>Google Analytics (Google LLC)</td>
+          <td>Session identifier</td>
+          <td>2 years</td>
+          <td>Anonymized</td>
+        </tr>
+        <tr>
+          <td>_gid</td>
+          <td>Google Analytics (Google LLC)</td>
+          <td>User identification within session</td>
+          <td>24 hours</td>
+          <td>Anonymized</td>
+        </tr>
+        <tr>
+          <td>_gat_gtag_*</td>
+          <td>Google Analytics (Google LLC)</td>
+          <td>Rate limiting requests</td>
+          <td>1 minute</td>
+          <td>Anonymized</td>
+        </tr>
+      </table>
+
+      <h3>Google Analytics Details</h3>
+      <ul>
+        <li><strong>Provider:</strong> Google LLC (USA) - Standard Contractual Clauses</li>
+        <li><strong>Purpose:</strong> Website analytics, user behavior tracking</li>
+        <li><strong>Data Retention:</strong> 2 years (default GA setting)</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+        <li><strong>Opt-out:</strong> <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Extension</a></li>
+      </ul>
+    </div>
+
+    <!-- 5. Marketing Cookies -->
+    <div class="cookie-category">
+      <h3>
+        📢 Marketing & Advertising Cookies
+        <span class="badge">Consent Required</span>
+      </h3>
+      <p>
+        These cookies enable targeted advertising and retargeting campaigns on social media and partner websites. 
+        They track conversions and user interests to show relevant ads. 
+        <strong>You can opt-out in the cookie banner.</strong>
+      </p>
+
+      <table>
+        <tr>
+          <th>Cookie Name</th>
+          <th>Provider</th>
+          <th>Purpose</th>
+          <th>Duration</th>
+          <th>Platform</th>
+        </tr>
+        <tr>
+          <td>_fbp</td>
+          <td>Meta Pixel (Meta Platforms Inc.)</td>
+          <td>Facebook conversion tracking</td>
+          <td>90 days</td>
+          <td>Facebook/Instagram</td>
+        </tr>
+        <tr>
+          <td>_fbc</td>
+          <td>Meta Pixel (Meta Platforms Inc.)</td>
+          <td>Facebook click ID tracking</td>
+          <td>90 days</td>
+          <td>Facebook/Instagram</td>
+        </tr>
+        <tr>
+          <td>fr</td>
+          <td>Meta Pixel (Meta Platforms Inc.)</td>
+          <td>Measure ad effectiveness</td>
+          <td>90 days</td>
+          <td>Facebook/Instagram</td>
+        </tr>
+        <tr>
+          <td>GoogleAdServingTest</td>
+          <td>Google Ads (Google LLC)</td>
+          <td>Ad campaign performance</td>
+          <td>Session</td>
+          <td>Google Ads</td>
+        </tr>
+        <tr>
+          <td>NID</td>
+          <td>Google (Google LLC)</td>
+          <td>Ad personalization and frequency</td>
+          <td>6 months</td>
+          <td>Google Network</td>
+        </tr>
+        <tr>
+          <td>li_gc</td>
+          <td>LinkedIn Insight (Microsoft)</td>
+          <td>Conversion tracking for B2B ads</td>
+          <td>180 days</td>
+          <td>LinkedIn</td>
+        </tr>
+        <tr>
+          <td>li_sugr</td>
+          <td>LinkedIn Insight (Microsoft)</td>
+          <td>LinkedIn ad tracking</td>
+          <td>90 days</td>
+          <td>LinkedIn</td>
+        </tr>
+      </table>
+
+      <h3>Marketing Partners</h3>
+      <ul>
+        <li>
+          <strong>Meta Pixel:</strong> <a href="https://www.facebook.com/policies/cookies/" target="_blank" rel="noopener noreferrer">Meta Cookie Policy</a>
+        </li>
+        <li>
+          <strong>Google Ads:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
+        </li>
+        <li>
+          <strong>LinkedIn Insight:</strong> <a href="https://www.linkedin.com/legal/cookie-policy" target="_blank" rel="noopener noreferrer">LinkedIn Cookie Policy</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 6. Personalization Cookies -->
+    <div class="cookie-category">
+      <h3>
+        🎯 Personalization Cookies
+        <span class="badge">Consent Required</span>
+      </h3>
+      <p>
+        These cookies remember your preferences, language selection, and browsing history 
+        to provide a personalized experience on future visits.
+      </p>
+
+      <table>
+        <tr>
+          <th>Cookie Name</th>
+          <th>Purpose</th>
+          <th>Duration</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td>user_preferences</td>
+          <td>Store language and theme preferences</td>
+          <td>1 year</td>
+          <td>First-party</td>
+        </tr>
+        <tr>
+          <td>session_history</td>
+          <td>Remember recently viewed pages</td>
+          <td>1 year</td>
+          <td>First-party</td>
+        </tr>
+        <tr>
+          <td>site_language</td>
+          <td>Store language preference (IT/EN)</td>
+          <td>1 year</td>
+          <td>First-party</td>
+        </tr>
+        <tr>
+          <td>dark_mode_preference</td>
+          <td>Remember dark/light mode choice</td>
+          <td>1 year</td>
+          <td>First-party</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 7. Functionality Cookies -->
+    <div class="cookie-category">
+      <h3>
+        ⚙️ Functionality Cookies
+        <span class="badge">Consent Required</span>
+      </h3>
+      <p>
+        These cookies enable advanced features like video playback, interactive maps, 
+        and other enhanced functionality from third-party services.
+      </p>
+
+      <table>
+        <tr>
+          <th>Cookie Name</th>
+          <th>Provider</th>
+          <th>Purpose</th>
+          <th>Duration</th>
+        </tr>
+        <tr>
+          <td>video_settings</td>
+          <td>YouTube/Vimeo</td>
+          <td>Video player preferences</td>
+          <td>Session</td>
+        </tr>
+        <tr>
+          <td>map_zoom_level</td>
+          <td>Google Maps</td>
+          <td>Remember map zoom preference</td>
+          <td>Session</td>
+        </tr>
+        <tr>
+          <td>VISITOR_INFO1_LIVE</td>
+          <td>YouTube (Google LLC)</td>
+          <td>Video player statistics</td>
+          <td>180 days</td>
+        </tr>
+        <tr>
+          <td>YSC</td>
+          <td>YouTube (Google LLC)</td>
+          <td>YouTube session</td>
+          <td>Session</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 8. Manage Cookies -->
+    <h2 id="manage">8. How to Manage Cookies</h2>
+
+    <h3>8.1 Using Our Cookie Banner</h3>
+    <p>
+      The easiest way to manage cookies is using the cookie preference banner at the bottom of our website:
+    </p>
+    <ul>
+      <li>Click "Settings" to open the preferences modal</li>
+      <li>Toggle each category ON or OFF</li>
+      <li>Click "Save Preferences" to apply your choices</li>
+      <li>Click "Reject All" to disable non-essential cookies</li>
+    </ul>
+
+    <h3>8.2 Browser Settings</h3>
+    <p>
+      You can control cookies through your web browser settings:
+    </p>
+    <ul>
+      <li><strong>Chrome:</strong> Settings → Privacy and security → Cookies</li>
+      <li><strong>Firefox:</strong> Preferences → Privacy & Security → Cookies</li>
+      <li><strong>Safari:</strong> Preferences → Privacy → Manage website data</li>
+      <li><strong>Edge:</strong> Settings → Privacy → Cookies and site permissions</li>
+      <li><strong>Opera:</strong> Preferences → Advanced → Cookies</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>⚠️ Note:</strong> Blocking cookies may affect website functionality and your browsing experience. 
+      Essential cookies cannot be disabled without breaking site features.
+    </div>
+
+    <h3>8.3 Third-Party Opt-Out Tools</h3>
+    <ul>
+      <li>
+        <strong>Google Analytics Opt-out:</strong> 
+        <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">
+          Browser extension
+        </a>
+      </li>
+      <li>
+        <strong>Network Advertising Initiative (NAI):</strong> 
+        <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer">
+          Opt-out portal
+        </a>
+      </li>
+      <li>
+        <strong>Digital Advertising Alliance (DAA):</strong> 
+        <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">
+          Consumer choice
+        </a>
+      </li>
+      <li>
+        <strong>ePrivacy Directive:</strong> 
+        <a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener noreferrer">
+          EU opt-out platform
+        </a>
+      </li>
+    </ul>
+
+    <h3>8.4 Withdraw Consent Anytime</h3>
+    <p>
+      You can withdraw your consent at any time:
+    </p>
+    <ul>
+      <li>Click the cookie banner "Settings" button and adjust your preferences</li>
+      <li>Email our DPO: <a href="mailto:privacy@annaritadigenova.com">privacy@annaritadigenova.com</a></li>
+      <li>Call: <a href="tel:+393888972060">+39 388 897 2060</a></li>
+    </ul>
+
+    <!-- 9. Contact -->
+    <h2 id="contact">9. Contact Information</h2>
+    <p>
+      For questions about this Cookie Policy or our cookie practices:
+    </p>
+
+    <div class="contact-box">
+      <h3>Data Protection Officer (DPO)</h3>
+      <p><strong>Email:</strong> <a href="mailto:privacy@annaritadigenova.com">privacy@annaritadigenova.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+393888972060">+39 388 897 2060</a></p>
+      <p><strong>Response Time:</strong> Within 5 business days</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Data Controller</h3>
+      <p><strong>Annarita Di Genova</strong></p>
+      <p><strong>Email:</strong> <a href="mailto:annaritadigenova@gmail.com">annaritadigenova@gmail.com</a></p>
+      <p><strong>Address:</strong> Roma, Lazio, Italy</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Related Documents</h3>
+      <p>
+        <a href="/privacy-policy" style="color: var(--red); font-weight: 600; text-decoration: none;">
+          → Privacy Policy
+        </a><br>
+        <a href="/" style="color: var(--red); font-weight: 600; text-decoration: none;">
+          → Back to Portfolio
+        </a>
+      </p>
+    </div>
+
+    <!-- Last Updated -->
+    <div class="last-updated">
+      <p>
+        <strong>Last Updated:</strong> January 15, 2026<br>
+        <strong>Effective From:</strong> January 15, 2026<br>
+        <strong>Version:</strong> 1.0
+      </p>
+      <p style="margin-top: 1rem;">
+        This Cookie Policy may be updated periodically. Continued use of the website 
+        constitutes acceptance of any updates.
+      </p>
+    </div>
+
+  </div>
+
+  <footer role="contentinfo">
+    <p>
+      &copy; 2026 Annarita Di Genova · 
+      <a href="/">Back to Portfolio</a> · 
+      <a href="/privacy-policy">Privacy Policy</a> · 
+      <a href="mailto:privacy@annaritadigenova.com">Privacy Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>
