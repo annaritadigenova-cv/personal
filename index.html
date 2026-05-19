@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <!-- Google Consent Mode v2 - Initializes BEFORE GTM -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -42,8 +41,9 @@
           gtag('consent', 'update', {
             'ad_storage': consent.ad_storage ? 'granted' : 'denied',
             'analytics_storage': consent.analytics_storage ? 'granted' : 'denied',
-            'functionality_storage': consent.functionality_storage ? 'granted' : 'denied',
-            'personalization_storage': consent.personalization_storage ? 'granted' : 'denied',
+            // Functionality and Personalization restano sempre denied perché non usati
+            'functionality_storage': 'denied',
+            'personalization_storage': 'denied',
             'security_storage': 'granted'
           });
           
@@ -71,7 +71,6 @@
     }
   </script>
 
-  <!-- Google Tag Manager (noscript-safe, fires only after consent) -->
   <script>
     (function() {
       const savedConsent = localStorage.getItem('gdpr_consent');
@@ -90,7 +89,6 @@
     })();
   </script>
 
-  <!-- Google Analytics (fires only after consent) -->
   <script>
     (function() {
       const savedConsent = localStorage.getItem('gdpr_consent');
@@ -122,7 +120,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   
-  <!-- Robots meta for privacy -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   
   <style>
@@ -914,12 +911,10 @@
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) - Only loads after consent -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T384K4P2" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-  <!-- GDPR CONSENT BANNER -->
   <div id="consent-banner">
     <div class="consent-wrapper">
       <div class="consent-text">
@@ -938,7 +933,6 @@
     </div>
   </div>
 
-  <!-- GDPR CONSENT MODAL -->
   <div id="consent-modal" role="dialog" aria-labelledby="consent-modal-title" aria-modal="true">
     <div class="consent-modal-content">
       <div class="consent-modal-header">
@@ -954,7 +948,6 @@
         </p>
       </div>
 
-      <!-- Essential Cookies -->
       <div class="consent-category">
         <h3>🔒 Essential (Required)</h3>
         <div class="consent-category-desc">
@@ -967,7 +960,6 @@
         </div>
       </div>
 
-      <!-- Analytics Storage -->
       <div class="consent-category">
         <h3>📊 Analytics</h3>
         <div class="consent-category-desc">
@@ -992,31 +984,6 @@
         </div>
       </div>
 
-      <!-- Personalization Storage -->
-      <div class="consent-category">
-        <h3>🎯 Personalization</h3>
-        <div class="consent-category-desc">
-          <strong>Purpose:</strong> Remember your preferences, language selection, and browsing behavior to deliver a customized experience tailored to your interests.
-          <br><strong>Duration:</strong> 1 year
-          <br><strong>Data Types:</strong> Preferences, language, theme selection
-        </div>
-        <div class="consent-toggle">
-          <div class="toggle-switch" id="personalization-toggle" onclick="toggleCategory(this)"></div>
-          <span style="color: #fff; font-size: 0.9rem;">Enable Personalization</span>
-        </div>
-        <div class="cookie-list">
-          <div class="cookie-item">
-            <span class="cookie-name">user_preferences</span>
-            <span class="cookie-desc">Stores your language and theme preferences</span>
-          </div>
-          <div class="cookie-item">
-            <span class="cookie-name">session_history</span>
-            <span class="cookie-desc">Remembers recently viewed content</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Marketing/Ad Storage -->
       <div class="consent-category">
         <h3>📢 Marketing & Advertising</h3>
         <div class="consent-category-desc">
@@ -1045,31 +1012,6 @@
         </div>
       </div>
 
-      <!-- Functionality Storage -->
-      <div class="consent-category">
-        <h3>⚙️ Functionality</h3>
-        <div class="consent-category-desc">
-          <strong>Purpose:</strong> Enable advanced features like video playback, interactive maps, embedded content, and other enhanced functionality.
-          <br><strong>Duration:</strong> Session
-          <br><strong>Providers:</strong> YouTube, Vimeo, Google Maps
-        </div>
-        <div class="consent-toggle">
-          <div class="toggle-switch" id="functionality-toggle" onclick="toggleCategory(this)"></div>
-          <span style="color: #fff; font-size: 0.9rem;">Enable Functionality</span>
-        </div>
-        <div class="cookie-list">
-          <div class="cookie-item">
-            <span class="cookie-name">video_settings</span>
-            <span class="cookie-desc">YouTube/Vimeo playback preferences</span>
-          </div>
-          <div class="cookie-item">
-            <span class="cookie-name">map_zoom_level</span>
-            <span class="cookie-desc">Google Maps default settings</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Legal Compliance Section -->
       <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(192, 57, 43, 0.1); border-radius: 2px; border-left: 3px solid var(--red);">
         <p style="color: #aaa; font-size: 0.85rem; line-height: 1.7; margin: 0;">
           <strong style="color: #fff;">📋 Legal Information:</strong><br>
@@ -1091,7 +1033,6 @@
     </div>
   </div>
 
-  <!-- NAV -->
   <nav role="navigation" aria-label="Main navigation">
     <a href="#" class="nav-logo">Annarita <span>Di Genova</span></a>
     <div style="display:flex;align-items:center;gap:2rem;">
@@ -1118,7 +1059,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-left">
       <div class="hero-tag">Digital Marketing Director</div>
@@ -1156,7 +1096,6 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
       <div class="section-header fade-in">
@@ -1242,7 +1181,6 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="skills">
     <div class="container">
       <div class="section-header fade-in">
@@ -1284,7 +1222,6 @@
     </div>
   </section>
 
-  <!-- NEWSLETTER -->
   <section id="newsletter">
     <div class="container">
       <div class="section-header fade-in">
@@ -1343,7 +1280,6 @@
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
   <section id="certs">
     <div class="container">
       <div class="section-header fade-in">
@@ -1412,7 +1348,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <div class="section-tag">Contact</div>
@@ -1440,10 +1375,11 @@
 
   <footer role="contentinfo">
     <div style="margin-bottom: 1rem;">
-      &copy; 2026 Annarita Di Genova · Digital Marketing Director · Roma, Italy
+      © 2026 Annarita Di Genova · Digital Marketing Director · Roma, Italy
     </div>
     <div class="footer-links">
       <a href="privacy-policy.html" title="Read our Privacy Policy">Privacy Policy</a>
+      <a href="privacy-policy.html" title="Read our Cookie Policy">Cookie Policy</a>
       <a href="mailto:privacy@annaritadigenova.com" title="Contact our Data Protection Officer">DPO Contact</a>
       <a href="#" onclick="openConsentModal(event)" title="Manage your privacy preferences">Privacy Preferences</a>
     </div>
@@ -1476,9 +1412,7 @@
         action: consentData.action || 'consent_update',
         preferences: {
           analytics: consentData.analytics_storage,
-          personalization: consentData.personalization_storage,
-          marketing: consentData.ad_storage,
-          functionality: consentData.functionality_storage
+          marketing: consentData.ad_storage
         },
         userAgent: navigator.userAgent.substring(0, 100),
         ipAddress: 'SERVER_SIDE_ONLY' // Never log client IP
@@ -1492,8 +1426,6 @@
       const consentData = {
         ad_storage: true,
         analytics_storage: true,
-        functionality_storage: true,
-        personalization_storage: true,
         security_storage: true,
         consentGiven: true,
         action: 'accept_all'
@@ -1504,8 +1436,8 @@
       gtag('consent', 'update', {
         'ad_storage': 'granted',
         'analytics_storage': 'granted',
-        'functionality_storage': 'granted',
-        'personalization_storage': 'granted',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
         'security_storage': 'granted'
       });
 
@@ -1524,8 +1456,6 @@
       const consentData = {
         ad_storage: false,
         analytics_storage: false,
-        functionality_storage: false,
-        personalization_storage: false,
         security_storage: true,
         consentGiven: true,
         action: 'reject_all'
@@ -1578,9 +1508,7 @@
         try {
           const consent = JSON.parse(savedConsent);
           document.getElementById('analytics-toggle').classList.toggle('active', consent.analytics_storage);
-          document.getElementById('personalization-toggle').classList.toggle('active', consent.personalization_storage);
           document.getElementById('ad-toggle').classList.toggle('active', consent.ad_storage);
-          document.getElementById('functionality-toggle').classList.toggle('active', consent.functionality_storage);
         } catch (e) {
           console.error('[GDPR] Error loading preferences:', e);
         }
@@ -1591,9 +1519,7 @@
     function saveConsentPreferences() {
       const consentData = {
         analytics_storage: document.getElementById('analytics-toggle').classList.contains('active'),
-        personalization_storage: document.getElementById('personalization-toggle').classList.contains('active'),
         ad_storage: document.getElementById('ad-toggle').classList.contains('active'),
-        functionality_storage: document.getElementById('functionality-toggle').classList.contains('active'),
         security_storage: true,
         consentGiven: true,
         action: 'custom_preferences'
@@ -1604,8 +1530,8 @@
       gtag('consent', 'update', {
         'ad_storage': consentData.ad_storage ? 'granted' : 'denied',
         'analytics_storage': consentData.analytics_storage ? 'granted' : 'denied',
-        'functionality_storage': consentData.functionality_storage ? 'granted' : 'denied',
-        'personalization_storage': consentData.personalization_storage ? 'granted' : 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
         'security_storage': 'granted'
       });
 
@@ -1616,9 +1542,7 @@
         'event_category': 'gdpr',
         'event_label': 'custom_preferences_saved',
         'analytics': consentData.analytics_storage,
-        'personalization': consentData.personalization_storage,
-        'marketing': consentData.ad_storage,
-        'functionality': consentData.functionality_storage
+        'marketing': consentData.ad_storage
       });
     }
 
