@@ -4,82 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <!-- SEO & META TAGS -->
   <title>Privacy e Cookie Policy | Annarita Di Genova - Digital Marketing Director</title>
   <meta name="description" content="Consulta la Privacy e Cookie Policy di Annarita Di Genova. Informazioni trasparenti sul trattamento dei dati e sull'uso dei cookie nel portfolio professionale.">
   <meta name="robots" content="noindex, follow">
-  
-  <meta property="og:title" content="Privacy e Cookie Policy | Annarita Di Genova">
-  <meta property="og:description" content="Informazioni sulla privacy e l'uso dei cookie nel portfolio professionale di Annarita Di Genova.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://annaritadigenova-cv.github.io/personal/privacy-policy.html">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  
+
+  <!-- CONSENT MODE & GTM LOADER (Uguale alla main page) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'denied',
+      'personalization_storage': 'denied',
+      'security_storage': 'denied',
+      'wait_for_update': 500,
+      'region': ['IT']
+    });
+
+    // Inizializza il consenso salvato
+    function initializeConsent() {
+      const savedConsent = localStorage.getItem('gdpr_consent');
+      if (savedConsent) {
+        try {
+          const consent = JSON.parse(savedConsent);
+          gtag('consent', 'update', {
+            'ad_storage': consent.ad_storage ? 'granted' : 'denied',
+            'analytics_storage': consent.analytics_storage ? 'granted' : 'denied',
+            'security_storage': 'granted'
+          });
+        } catch (e) { console.error('Consent load error:', e); }
+      }
+    }
+    initializeConsent();
+  </script>
+
+  <!-- GTM LOADER -->
+  <script>
+    (function() {
+      const savedConsent = localStorage.getItem('gdpr_consent');
+      if (savedConsent) {
+        try {
+          const consent = JSON.parse(savedConsent);
+          if (consent.analytics_storage || consent.ad_storage) {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-T384K4P2');
+          }
+        } catch (e) {}
+      }
+    })();
+  </script>
+
   <style>
     :root { --red: #C0392B; --dark: #111111; --light: #f5f3ef; --cream: #faf8f4; --gray: #888; --border: #e0ddd6; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--dark); line-height: 1.7; }
-
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: rgba(250,248,244,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; letter-spacing: 0.05em; color: var(--dark); text-decoration: none; }
-    .nav-logo span { color: var(--red); }
-    .nav-back { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
-    .nav-back:hover { color: var(--red); }
-
-    .policy-container { max-width: 900px; margin: 100px auto 0; padding: 4rem; background: white; min-height: 100vh; }
-    .policy-header { margin-bottom: 3rem; border-bottom: 2px solid var(--red); padding-bottom: 2rem; }
-    .policy-header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; color: var(--dark); }
-    
-    h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.5rem; border-top: 1px solid var(--border); padding-top: 2rem; }
-    h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; margin-top: 1.5rem; color: var(--dark); }
-    p { margin-bottom: 1rem; text-align: justify; }
-    ul { margin-bottom: 1.5rem; margin-left: 2rem; }
-    
-    .contact-box { background: var(--light); border: 1px solid var(--border); padding: 2rem; margin: 2rem 0; }
-    .contact-box a { color: var(--red); text-decoration: none; font-weight: 600; }
-    
-    footer { background: var(--dark); color: #ccc; text-align: center; padding: 2rem; margin-top: 4rem; font-size: 0.75rem; }
-    footer a { color: var(--red); text-decoration: none; }
-    
-    @media (max-width: 900px) { .policy-container { padding: 2rem; } }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--dark); text-decoration: none; }
+    .nav-back { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+    .policy-container { max-width: 800px; margin: 120px auto; padding: 0 2rem; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2rem; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem; }
+    .contact-box { background: white; padding: 2rem; border-left: 3px solid var(--red); margin: 2rem 0; }
+    footer { text-align: center; padding: 3rem; font-size: 0.8rem; }
   </style>
 </head>
 <body>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T384K4P2" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 
-  <nav role="navigation">
+  <nav>
     <a href="index.html" class="nav-logo">Annarita <span>Di Genova</span></a>
-    <a href="index.html" class="nav-back">← Back to Portfolio</a>
+    <a href="index.html" class="nav-back">← Torna al Portfolio</a>
   </nav>
 
   <div class="policy-container">
-    <div class="policy-header">
-      <h1>Privacy & Cookie Policy</h1>
-      <p><strong>Ultimo aggiornamento:</strong> 19 Maggio 2026</p>
-    </div>
+    <h1>Privacy & Cookie Policy</h1>
+    <p><strong>Ultimo aggiornamento:</strong> 19 Maggio 2026</p>
 
     <h2>1. Introduzione</h2>
-    <p>Questo documento informa gli utenti sulle modalità di gestione del portfolio annaritadigenova-cv.github.io/personal/ in riferimento al trattamento dei dati personali e all'uso dei cookie.</p>
+    <p>La protezione dei tuoi dati è una priorità. Questo documento spiega come il mio portfolio utilizza i cookie e gestisce i tuoi dati personali.</p>
 
-    <h2>2. Dati Raccolti</h2>
-    <p>Il sito raccoglie automaticamente dati di navigazione (tramite cookie tecnici e analitici) e dati forniti volontariamente dall'utente tramite email di contatto.</p>
+    <h2>2. Cookie utilizzati</h2>
+    <p>Il sito utilizza cookie tecnici (necessari per il funzionamento) e cookie analitici (Google Analytics), attivati solo previo tuo esplicito consenso.</p>
 
     <h2>3. Finalità del trattamento</h2>
-    <p>I dati sono trattati per garantire il corretto funzionamento del sito, analizzare le statistiche di accesso (Google Analytics) e rispondere alle tue richieste.</p>
+    <p>I dati raccolti servono per comprendere come i visitatori interagiscono con il sito, permettendomi di migliorare l'esperienza utente.</p>
 
-    <h2>4. Cookie Policy</h2>
-    <p>Utilizziamo cookie essenziali per ricordare le tue preferenze di consenso e cookie di analisi per migliorare l'esperienza utente. Nessun dato viene ceduto a terzi per finalità diverse da quelle indicate.</p>
-
-    <h2 id="contact">5. Contatti e Titolare del Trattamento</h2>
+    <h2>4. Contatti</h2>
     <div class="contact-box">
-      <p><strong>Titolare:</strong> Annarita Di Genova</p>
+      <p><strong>Titolare del trattamento:</strong> Annarita Di Genova</p>
       <p>Email: <a href="mailto:annaritadigenova@gmail.com">annaritadigenova@gmail.com</a></p>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2026 Annarita Di Genova · <a href="index.html">Back to Portfolio</a> · <a href="privacy-policy.html">Privacy & Cookie Policy</a></p>
+    <p>&copy; 2026 Annarita Di Genova · <a href="index.html">Portfolio</a> · <a href="privacy-policy.html">Privacy & Cookie Policy</a></p>
   </footer>
-
 </body>
 </html>
