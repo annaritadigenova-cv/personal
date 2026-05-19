@@ -927,7 +927,7 @@
         <p style="margin-top: 0.5rem;">
           This site uses cookies and analytics to improve your experience. We respect your privacy and only use data with your consent. 
           <a href="#" onclick="openConsentModal(event)" style="font-weight: 700;">Learn more and customize</a> your preferences, or review our 
-          <a href="#" onclick="openPrivacyPolicy(event)">Privacy Policy</a>.
+          <a href="privacy-policy.html">Privacy Policy</a>.
         </p>
       </div>
       <div class="consent-actions">
@@ -949,7 +949,7 @@
       <div style="margin-bottom: 1.5rem;">
         <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">
           <strong>Your Privacy Matters</strong> — We use cookies and similar tracking technologies to enhance your experience, analyze how you use our site, and deliver personalized content. 
-          Detailed information about our data processing is available in our <a href="#" onclick="openPrivacyPolicy(event)" style="color: var(--red); text-decoration: underline;">Privacy Policy</a>. 
+          Detailed information about our data processing is available in our <a href="privacy-policy.html" style="color: var(--red); text-decoration: underline;">Privacy Policy</a>. 
           You can withdraw your consent at any time by clicking "Settings" in the cookie banner or contacting our DPO.
         </p>
       </div>
@@ -1079,7 +1079,7 @@
           <strong>Rights:</strong> You have the right to access, rectify, erase, restrict processing, object, and data portability. 
           Withdraw consent anytime via <a href="mailto:privacy@annaritadigenova.com" style="color: var(--red); text-decoration: underline;">email</a>.<br>
           <strong>Complaint:</strong> Contact your local Data Protection Authority if you believe your rights are violated.<br>
-          <strong>Last Updated:</strong> January 2026 | <a href="#" onclick="openCookiePolicy(event)" style="color: var(--red); text-decoration: underline;">Full Cookie Policy</a>
+          <strong>Last Updated:</strong> January 2026 | <a href="privacy-policy.html" style="color: var(--red); text-decoration: underline;">Full Cookie Policy</a>
         </p>
       </div>
 
@@ -1443,8 +1443,8 @@
       &copy; 2026 Annarita Di Genova · Digital Marketing Director · Roma, Italy
     </div>
     <div class="footer-links">
-      <a href="#" onclick="openPrivacyPolicy(event)" title="Read our Privacy Policy">Privacy Policy</a>
-      <a href="#" onclick="openCookiePolicy(event)" title="Read our Cookie Policy">Cookie Policy</a>
+      <a href="privacy-policy.html" title="Read our Privacy Policy">Privacy Policy</a>
+      <a href="privacy-policy.html" title="Read our Cookie Policy">Cookie Policy</a>
       <a href="mailto:privacy@annaritadigenova.com" title="Contact our Data Protection Officer">DPO Contact</a>
       <a href="#" onclick="openConsentModal(event)" title="Manage your privacy preferences">Privacy Preferences</a>
     </div>
@@ -1621,40 +1621,6 @@
         'marketing': consentData.ad_storage,
         'functionality': consentData.functionality_storage
       });
-    }
-
-    // Withdraw consent function (for future use)
-    function withdrawConsent() {
-      localStorage.removeItem('gdpr_consent');
-      localStorage.removeItem('gdpr_consent_timestamp');
-      localStorage.removeItem('gdpr_consent_audit');
-      
-      gtag('consent', 'update', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied',
-        'functionality_storage': 'denied',
-        'personalization_storage': 'denied',
-        'security_storage': 'denied'
-      });
-
-      gtag('event', 'consent_withdrawn', {
-        'event_category': 'gdpr',
-        'event_label': 'user_withdrew_consent',
-        'timestamp': new Date().toISOString()
-      });
-
-      console.log('[GDPR] Consent withdrawn. Please refresh the page.');
-    }
-
-    // Policy pages (to be implemented with actual content)
-    function openPrivacyPolicy(event) {
-      event.preventDefault();
-      alert('Privacy Policy - Coming Soon\n\nData Controller: Annarita Di Genova, Roma, Italy\nDPO: privacy@annaritadigenova.com\n\nPlease contact the DPO for the full policy document.');
-    }
-
-    function openCookiePolicy(event) {
-      event.preventDefault();
-      alert('Cookie Policy - Coming Soon\n\nFull list of cookies, third-party providers, and retention periods.\nContact: privacy@annaritadigenova.com');
     }
 
     // Generic event tracking (consent-aware)
